@@ -8,6 +8,7 @@ function onBallClick(ball) {
 
   ballHeight += getRandomInt(20, 60)
   ballWidth += getRandomInt(20, 60)
+
  } else if (ballSize > 400) {
   ballHeight = 100
   ballWidth = 100
@@ -18,5 +19,5 @@ function onBallClick(ball) {
  ball.style.height = ballHeight + 'px'
  ball.style.width = ballWidth + 'px'
  ball.innerText = ballSize
-
+ ball.style.backgroundColor = getRandomColor()
 }
