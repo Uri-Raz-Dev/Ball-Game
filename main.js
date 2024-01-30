@@ -4,15 +4,16 @@ function onBallClick(ball) {
  var ballHeight = ball.offsetHeight
  var ballWidth = ball.offsetWidth
  var ballSize = ballHeight + ballWidth
- if (ballSize <= 400) {
+ const maxDiameter = 400
+ if (ballSize <= maxDiameter) {
 
   ballHeight += getRandomInt(20, 60)
   ballWidth += getRandomInt(20, 60)
 
- } else if (ballSize > 400) {
-  ballHeight = 100
-  ballWidth = 100
-  ballSize = 200
+ } else if (ballSize > maxDiameter) {
+  ballHeight = 50
+  ballWidth = 50
+  ballSize = 100
  }
  ballSize = ballHeight + ballWidth
 
