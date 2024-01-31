@@ -22,7 +22,7 @@ h1 {
  height: 50px;
  border-radius: 50%;
  font-weight: bold;
- font-size: 22px;
+ font-size: 18px;
  transition: 1s;
 }
 
@@ -38,5 +38,10 @@ h1 {
 
 .ball3 {
  background-color: greenyellow;
+ margin: 150 auto;
+}
+
+.ball4 {
+ background-color: plum;
  margin: 200 auto;
 }
