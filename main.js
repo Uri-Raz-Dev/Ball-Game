@@ -97,7 +97,7 @@ function callFuns() {
 }
 
 
-function repeatEH(ball) {
+function repeatEH() {
  var loopCounter = 0
  setTimeout(() => {
   activateBalls = setInterval(() => {
@@ -109,4 +109,9 @@ function repeatEH(ball) {
    }
   }, 2000)
  }, 2000)
+}
+
+
+function cancelRepeatEH() {
+ clearInterval(activateBalls)
 }

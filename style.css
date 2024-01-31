@@ -28,30 +28,46 @@ h1 {
 
 .ball1 {
  background-color: orange;
- margin: 0 auto;
+ grid-column: 1/1;
 }
 
 .ball2 {
  background-color: yellow;
- margin: 25 auto;
+ grid-column: 1;
+ grid-row: 2;
 }
 
 .ball3 {
  background-color: greenyellow;
- margin: 50 auto;
+ grid-row: 3;
 }
 
 .ball4 {
  background-color: plum;
- margin: 75 auto;
+ grid-column: 2;
 }
 
 .ball5 {
  background-color: peru;
- margin: 90 auto;
+ grid-column: 2;
+ grid-row: 2;
 }
 
 .ball6 {
  background-color: rosybrown;
- margin: 105 auto;
+ grid-column: 2;
+ grid-row: 3;
+ height: 150;
+ width: 150;
+}
+
+.ball-container {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-template-rows: repeat(3, 200px);
+
+ place-items: center;
+
+ gap: 50px;
+
 }
