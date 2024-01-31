@@ -1,5 +1,11 @@
 'use strict'
+
+var activateBalls
+
+
+var onHover
 function onBallClick(ball) {
+ // if (!ball) return;
  var ballHeight = ball.offsetHeight
  var ballWidth = ball.offsetWidth
  var ballSize = ballHeight + ballWidth
@@ -14,12 +20,12 @@ function onBallClick(ball) {
   ballWidth = 50
   ballSize = 100
  }
- ballSize = ballHeight + ballWidth
 
  ball.style.height = ballHeight + 'px'
  ball.style.width = ballWidth + 'px'
- ball.innerText = ballSize
  ball.style.backgroundColor = getRandomColor()
+ ballSize = ballHeight + ballWidth
+ ball.innerText = ballSize
 }
 
 function swapOnClick() {
@@ -78,4 +84,29 @@ function reduceOnClick() {
 function bgColOnClick() {
  const bodyBg = document.querySelector('body')
  bodyBg.style.backgroundColor = getRandomColor()
+}
+
+function callFuns() {
+ const ball1 = document.querySelector('.ball1')
+ const ball2 = document.querySelector('.ball2')
+
+ onBallClick(ball1)
+ onBallClick(ball2)
+ swapOnClick()
+ reduceOnClick()
+}
+
+
+function repeatEH(ball) {
+ var loopCounter = 0
+ setTimeout(() => {
+  activateBalls = setInterval(() => {
+   loopCounter++
+   console.log(loopCounter);
+   callFuns()
+   if (loopCounter === 10) {
+    clearInterval(activateBalls)
+   }
+  }, 2000)
+ }, 2000)
 }

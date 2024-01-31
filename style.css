@@ -48,5 +48,10 @@ h1 {
 
 .ball5 {
  background-color: peru;
- margin: 100 auto;
+ margin: 90 auto;
+}
+
+.ball6 {
+ background-color: rosybrown;
+ margin: 105 auto;
 }
