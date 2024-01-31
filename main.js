@@ -74,3 +74,8 @@ function reduceOnClick() {
  ball1.innerText = ball1size
  ball2.innerText = ball2size
 }
+
+function bgColOnClick() {
+ const bodyBg = document.querySelector('body')
+ bodyBg.style.backgroundColor = getRandomColor()
+}

@@ -33,15 +33,20 @@ h1 {
 
 .ball2 {
  background-color: yellow;
- margin: 100 auto;
+ margin: 25 auto;
 }
 
 .ball3 {
  background-color: greenyellow;
- margin: 150 auto;
+ margin: 50 auto;
 }
 
 .ball4 {
  background-color: plum;
- margin: 200 auto;
+ margin: 75 auto;
+}
+
+.ball5 {
+ background-color: peru;
+ margin: 100 auto;
 }
