@@ -1,11 +1,9 @@
 'use strict'
 
 var activateBalls
+clearInterval(activateBalls)
 
-
-var onHover
 function onBallClick(ball) {
- // if (!ball) return;
  var ballHeight = ball.offsetHeight
  var ballWidth = ball.offsetWidth
  var ballSize = ballHeight + ballWidth
@@ -99,6 +97,7 @@ function callFuns() {
 
 function repeatEH() {
  var loopCounter = 0
+ clearInterval(activateBalls)
  setTimeout(() => {
   activateBalls = setInterval(() => {
    loopCounter++
@@ -114,4 +113,45 @@ function repeatEH() {
 
 function cancelRepeatEH() {
  clearInterval(activateBalls)
+}
+
+function resetClick() {
+
+ const gameBalls = document.querySelectorAll('.ball')
+ const bgColor = document.querySelector('body')
+
+ gameBalls.forEach((ball, i) => {
+  ball.style.height = '50px'
+  ball.style.width = '50px'
+
+
+  switch (i) {
+   case 0:
+    ball.style.backgroundColor = 'orange'
+    ball.innerText = 100
+    break;
+   case 1:
+    ball.style.backgroundColor = 'yellow'
+    ball.innerText = 100
+    break;
+   case 2:
+    ball.style.backgroundColor = 'greenyellow'
+    break;
+   case 3:
+    ball.style.backgroundColor = 'plum'
+    break;
+   case 4:
+    ball.style.backgroundColor = 'peru'
+    break;
+   case 5:
+    ball.style.backgroundColor = 'rosybrown'
+    break;
+   default:
+    break;
+  }
+
+ });
+ bgColor.style.backgroundColor = 'black'
+ clearInterval(activateBalls)
+
 }
